@@ -18,3 +18,6 @@ $ ./dotdrop/bootstrap.sh
 
 6. add dotfiles to dotdrop config
 
+```bash
+$ ./dotdrop.sh import ~/.vimrc ~/.tmux.conf ~/.tmux.zenburn.conf ~/.vim/
+```
