@@ -1,0 +1,24 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  d_vim:
+    dst: ~/.vim
+    src: vim
+  f_tmux.conf:
+    dst: ~/.tmux.conf
+    src: tmux.conf
+  f_tmux.zenburn.conf:
+    dst: ~/.tmux.zenburn.conf
+    src: tmux.zenburn.conf
+  f_vimrc:
+    dst: ~/.vimrc
+    src: vimrc
+profiles:
+  ip-172-31-19-220:
+    dotfiles:
+    - f_vimrc
+    - f_tmux.conf
+    - f_tmux.zenburn.conf
+    - d_vim

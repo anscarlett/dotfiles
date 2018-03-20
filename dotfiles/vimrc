@@ -1,0 +1,53 @@
+
+:let mapleader = ","
+
+:nnoremap <Leader>ev :botright split $MYVIMRC<cr>
+:nnoremap <Leader>sv :w<cr>:source $MYVIMRC<cr>:wq<cr>
+
+" Enable Elite mode, No ARRRROWWS!!!!
+" let g:elite_mode=1
+
+" Enable highlighting of the current line
+set cursorline
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/vimplug')
+Plug 'vim-scripts/Zenburn'
+Plug 'plasticboy/vim-markdown'
+Plug 'will133/vim-dirdiff'
+Plug 'leafgarland/typescript-vim'
+Plug 'tpope/vim-surround'
+call plug#end()
+
+:filetype on
+:filetype plugin on
+:syntax on
+
+:set number
+:set relativenumber
+:set autoindent
+:set paste
+:set hlsearch
+:set tabstop=4
+:set shiftwidth=4
+
+let g:limelight_conceal_ctermfg = 'DarkGray'
+"let g:closetag_filenames = '*.xml, *.html'
+"let g:closetag_shortcut = '>'
+
+:colorscheme zenburn
+
+
+" Disable arrow movement, resize splits instead.
+if get(g:, 'elite_mode')
+	nnoremap <Up>    :resize +2<CR>
+	nnoremap <Down>  :resize -2<CR>
+	nnoremap <Left>  :vertical resize +2<CR>
+	nnoremap <Right> :vertical resize -2<CR>
+endif
+
