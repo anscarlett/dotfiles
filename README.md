@@ -17,7 +17,18 @@ $ ./dotdrop/bootstrap.sh
 ```
 
 6. add dotfiles to dotdrop config
+7. add all files to repository
 
 ```bash
 $ ./dotdrop.sh import ~/.vimrc ~/.tmux.conf ~/.tmux.zenburn.conf ~/.vim/
+$ git add .
+$ git commit -m "initial commit"
+``` 
+8. Create a new repository on github
+9. synchronise local reporitory with github
+10. push everything to the new repository
+```bash
+$ remote add origin https://github.com/anscarlett/dotfiles.git
+$ git push origin master
 ```
+
