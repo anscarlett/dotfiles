@@ -17,3 +17,4 @@ $ ./dotdrop/bootstrap.sh
 ```
 
 6. add dotfiles to dotdrop config
+
