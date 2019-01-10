@@ -22,3 +22,9 @@ profiles:
     - f_tmux.conf
     - f_tmux.zenburn.conf
     - d_vim
+  pixelslate:
+    dotfiles:
+    - f_vimrc
+    - f_tmux.conf
+    - f_tmux.zenburn.conf
+    - d_vim
